@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8"> 
+  <title>Earnings Stats</title>
+  <link rel="stylesheet" href="/styles/stats.css">
+
+</head>
+
+<body>
+ <div class="slidecontainer">
+
+ 	<h2>Housing Expenditures</h2>
+	<input type="range" min="1" max="100" value="50" class="slider" id="myRange1">
+	<p>Value: <span id="demo1"></span></span></p>
+
+	<h2>Transportation Expenditures</h2>
+	<input type="range" min="1" max="100" value="50" class="slider" id="myRange2">
+	<p>Value: <span id="demo2"></span></span></p>
+
+
+	<h2>Food and Entertainment Expenditures</h2>
+	<input type="range" min="1" max="100" value="50" class="slider" id="myRange3">
+	<p>Value: <span id="demo3"></span></span></p>
+
+	<h2>Other Expenditures</h2>
+	<input type="range" min="1" max="100" value="50" class="slider" id="myRange4">
+	<p>Value: <span id="demo4"></span></span></p>
+
+	<h2>Savings</h2>
+	<input type="range" min="1" max="100" value="50" class="slider" id="myRange5">
+	<p>Value: <span id="demo5"></span></span></p>
+
+	<h2>Age to start saving</h2>
+	<input type="range" min="20" max="40" value="30" class="slider" id="myRange6">
+	<p>Value: <span id="demo6"></span></span></p>
+
+ </div>
+
+ 
+<script>
+  var slider1 = document.getElementById("myRange1");
+  var output1 = document.getElementById("demo1");
+  var slider2 = document.getElementById("myRange2");
+  var output2 = document.getElementById("demo2");
+  var slider3 = document.getElementById("myRange3");
+  var output3 = document.getElementById("demo3");
+  var slider4 = document.getElementById("myRange4");
+  var output4 = document.getElementById("demo4");
+  var slider5 = document.getElementById("myRange5");
+  var output5 = document.getElementById("demo5");
+  var slider6 = document.getElementById("myRange6");
+  var output6 = document.getElementById("demo6");
+  output1.innerHTML = slider1.value;
+  output2.innerHTML = slider2.value;
+  output3.innerHTML = slider3.value;
+  output4.innerHTML = slider4.value;
+  output5.innerHTML = slider5.value;
+  output6.innerHTML = slider6.value;
+
+
+  slider1.oninput = function()
+  {
+    output1.innerHTML = this.value;
+  }
+  slider2.oninput = function()
+  {
+    output2.innerHTML = this.value;
+  }
+  slider3.oninput = function()
+  {
+    output3.innerHTML = this.value;
+  }
+  slider4.oninput = function()
+  {
+    output4.innerHTML = this.value;
+  }
+  slider5.oninput = function()
+  {
+    output5.innerHTML = this.value;
+  }
+  slider6.oninput = function()
+  {
+    output6.innerHTML = this.value;
+  }
+ </script>
+
+</body>
+</html>
