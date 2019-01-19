@@ -8,6 +8,8 @@ var request = require("request");
 
 app.use("/styles", express.static(__dirname + '/styles'));
 app.use("/js", express.static(__dirname + '/js'));
+app.use("/TemplateData", express.static(__dirname + '/TemplateData'));
+app.use("/Build", express.static(__dirname + '/Build'));
 
 // Generates the get request for the website
 app.get('/', (req, res) => {
