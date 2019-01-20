@@ -17,35 +17,44 @@
 </head>
 <body>
 
+<h1>Earnings Report</h1>
+
 <div class="slidecontainer">
+  <button class="clickable" onclick="processInputs()">Submit</button>
+  <h2 id="earnedtotal">Earnings Total:</h2>
+  <p id="money">$60600</p>
   <ul id="sliders">
     <h2>Housing Expenditures</h2>
     <p class="first">$0</p>
+    <p class="words" id="label1"></p>
     <li>
       <div class="slider" id="first"></div>
       <span class="value" id="firstVal">0</span>
     </li>
     <h2>Transportation Expenditures</h2>
     <p class="second">$0</p>
+    <p class="words" id="label2"></p>
     <li>
       <div class="slider" id="second"></div>
       <span class="value" id="secondVal">0</span>
     </li>
     <h2>Food and Entertainment Expenditures</h2>
     <p class="third">$0</p>
-    <button class="clickable" onclick="processInputs()">Submit</button>
+    <p class="words" id="label3"></p>
     <li>
       <div class="slider" id="third"></div>
       <span class="value" id="thirdVal">0</span>
     </li>
     <h2>Other Expenditures</h2>
     <p class="forth">$0</p>
+    <p class="words" id="label4"></p>
     <li>
       <div class="slider" id="forth"></div>
       <span class="value" id="fourthVal">0</span>
     </li>
     <h2>Savings</h2>
     <p class="fifth">$0</p>
+    <p class="words" id="label5"></p>
     <li>
       <div class="slider" id="fifth"></div>
       <span class="value" id="fifthVal">0</span>
@@ -127,7 +136,72 @@
         }
     }
 
-    
+    if(parseInt(number1) < 25)
+    {
+      document.getElementById('label1').innerHTML = "<span style=\"color:red;\">You need more.</span>";
+    }
+    else if(parseInt(number1) > 31)
+    {
+      document.getElementById('label1').innerHTML = "<span style=\"color:red;\">You need less.</span>";
+    }
+    else
+    {
+      document.getElementById('label1').innerHTML = "<span style=\"color:green;\">You're spot on!</span>";
+    }
+
+    if(parseInt(number2) < 9)
+    {
+      document.getElementById('label2').innerHTML = "<span style=\"color:red;\">You need more.</span>";
+    }
+    else if(parseInt(number2) > 15)
+    {
+      document.getElementById('label2').innerHTML = "<span style=\"color:red;\">You need less.</span>";
+    }
+    else
+    {
+      document.getElementById('label2').innerHTML = "<span style=\"color:green;\">You're spot on!</span>";
+    }
+
+    if(parseInt(number3) < 11)
+    {
+      document.getElementById('label3').innerHTML = "<span style=\"color:red;\">You need more.</span>";
+    }
+    else if(parseInt(number3) > 17)
+    {
+      document.getElementById('label3').innerHTML = "<span style=\"color:red;\">You need less.</span>";
+    }
+    else
+    {
+      document.getElementById('label3').innerHTML = "<span style=\"color:green;\">You're spot on!</span>";
+    }
+
+    if(parseInt(number4) < 23)
+    {
+      document.getElementById('label4').innerHTML = "<span style=\"color:red;\">You need more.</span>";
+    }
+    else if(parseInt(number4) > 29)
+    {
+      document.getElementById('label4').innerHTML = "<span style=\"color:red;\">You need less.</span>";
+    }
+    else
+    {
+      document.getElementById('label4').innerHTML = "<span style=\"color:green;\">You're spot on!</span>";
+    }
+
+    if(parseInt(number5) < 17)
+    {
+      document.getElementById('label5').innerHTML = "<span style=\"color:red;\">You need more.</span>";
+    }
+    else if(parseInt(number5) > 23)
+    {
+      document.getElementById('label5').innerHTML = "<span style=\"color:red;\">You need less.</span>";
+    }
+    else
+    {
+      document.getElementById('label5').innerHTML = "<span style=\"color:green;\">You're spot on!</span>";
+    }
+
+
 
   }
 
