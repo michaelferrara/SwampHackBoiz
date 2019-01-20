@@ -18,7 +18,7 @@ sliders.each(function() {
             var className = $(this).attr('id');
             className = "." + className;
 
-            var num = 60000*parseInt(ui.value)*.01;
+            var num = "$" + 60000*parseInt(ui.value)*.01;
 
             $(className).text(num);
 

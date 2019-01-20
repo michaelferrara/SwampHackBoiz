@@ -20,34 +20,35 @@
 <div class="slidecontainer">
   <ul id="sliders">
     <h2>Housing Expenditures</h2>
-    <p class="first">MONEY</p>
+    <p class="first">$0</p>
     <li>
       <div class="slider" id="first"></div>
-      <span class="value">0</span>
+      <span class="value" id="firstVal">0</span>
     </li>
     <h2>Transportation Expenditures</h2>
-    <p class="second">MONEY</p>
+    <p class="second">$0</p>
     <li>
       <div class="slider" id="second"></div>
-      <span class="value">0</span>
+      <span class="value" id="secondVal">0</span>
     </li>
     <h2>Food and Entertainment Expenditures</h2>
-    <p class="third">MONEY</p>
+    <p class="third">$0</p>
+    <button class="clickable" onclick="processInputs()">Submit</button>
     <li>
       <div class="slider" id="third"></div>
-      <span class="value">0</span>
+      <span class="value" id="thirdVal">0</span>
     </li>
     <h2>Other Expenditures</h2>
-    <p class="forth">MONEY</p>
+    <p class="forth">$0</p>
     <li>
       <div class="slider" id="forth"></div>
-      <span class="value">0</span>
+      <span class="value" id="fourthVal">0</span>
     </li>
     <h2>Savings</h2>
-    <p class="fifth">MONEY</p>
+    <p class="fifth">$0</p>
     <li>
       <div class="slider" id="fifth"></div>
-      <span class="value">0</span>
+      <span class="value" id="fifthVal">0</span>
     </li>
   </ul>
 </div>
@@ -55,7 +56,82 @@
 <div class="container">
   <canvas id="myChart"></canvas>
 </div>
-<script src="C:/Users/Quinl/Desktop/Miscellaneous%20Codes/SwampHackBoiz/js/main.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+
+  function processInputs()
+  {
+    var value1 = document.getElementById('firstVal').textContent;
+    var number1;
+    number1 = value1.charAt(0);
+
+    if(value1.charAt(1) != '%' && value1.charAt(1) != '/')
+    {
+      number1 = number1 + value1.charAt(1);
+        if(value1.charAt(2) != '%' && value1.charAt(2) != '/')
+        {
+          number1 = number1 + value1.charAt(2);
+        }
+    }
+
+    var value2 = document.getElementById('secondVal').textContent;
+    var number2;
+    number2 = value2.charAt(0);
+
+    if(value2.charAt(1) != '%' && value2.charAt(1) != '/')
+    {
+      number2 = number2 + value2.charAt(1);
+        if(value2.charAt(2) != '%' && value2.charAt(2) != '/')
+        {
+          number2 = number2 + value2.charAt(2);
+        }
+    }
+
+    var value3 = document.getElementById('thirdVal').textContent;
+    var number3;
+    number3 = value3.charAt(0);
+
+    if(value3.charAt(1) != '%' && value3.charAt(1) != '/')
+    {
+      number3 = number3 + value3.charAt(1);
+        if(value3.charAt(2) != '%' && value3.charAt(2) != '/')
+        {
+          number3 = number3 + value3.charAt(2);
+        }
+    }
+
+    var value4 = document.getElementById('fourthVal').textContent;
+    var number4;
+    number4 = value4.charAt(0);
+
+    if(value4.charAt(1) != '%' && value4.charAt(1) != '/')
+    {
+      number4 = number4 + value4.charAt(1);
+        if(value4.charAt(2) != '%' && value4.charAt(2) != '/')
+        {
+          number4 = number4 + value4.charAt(2);
+        }
+    }
+
+    var value5 = document.getElementById('fifthVal').textContent;
+    var number5;
+    number5 = value5.charAt(0);
+
+    if(value5.charAt(1) != '%' && value5.charAt(1) != '/')
+    {
+      number5 = number5 + value5.charAt(1);
+        if(value5.charAt(2) != '%' && value5.charAt(2) != '/')
+        {
+          number5 = number5 + value5.charAt(2);
+        }
+    }
+
+    
+
+  }
+
+</script>
 
   <script>
     Chart.defaults.global.legend.display = false;
